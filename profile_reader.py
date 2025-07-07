@@ -33,7 +33,7 @@ def getHighestStake(stakes):
     return highest
 
 def moreJokers(txt):
-    x = re.search("\"j_[a-z]+\"]=", txt) 
+    x = re.search("\"j_[a-z0-9]+\"]=", txt) 
     if x != None:
         return True
     return False
@@ -53,7 +53,7 @@ def main():
     # Loop over each joker
     while (moreJokers(txt)):
         # get name of joker
-        joker = re.search("\"j_[a-z_]+\"", txt).group()
+        joker = re.search("\"j_[a-z0-9_]+\"", txt).group()
         
         # parse through joker stake wins
         wins = re.search("wins_by_key\"]={", txt)
