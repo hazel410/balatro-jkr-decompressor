@@ -21,7 +21,7 @@ def getStakeIndex(stake):
         case "_orange":
             return 7
         case "_gold":
-            return 8;
+            return 8
 # get highest completed stake for a joker
 def getHighestStake(stakes):
     highest = 0 # no sticker
